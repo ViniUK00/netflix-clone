@@ -1,0 +1,26 @@
+.row__posters {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    /* use padding so when i hover over the post wont cut out the outline of the picture
+    in other words it give it more invisible space so it can expand */
+    padding: 20px; 
+}
+
+/* the below deletes the scrollbar but keeps the functionality of the scrollbar */
+.row__posters::-webkit-scrollbar {
+    display: none;
+}
+
+.row_poster {
+    object-fit: contain;
+    width: 100%;
+    max-height: 100px;
+    margin-right: 10px;
+    transition: transform 450ms;
+}
+
+.row_poster:hover {
+    transform: scale(1.08);
+    opacity: 1;
+}
